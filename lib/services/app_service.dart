@@ -42,6 +42,7 @@ class AppService extends ChangeNotifier {
       'Thanh toán thành công',
       'Bạn đã thanh toán ${product.price} \$ cho ${product.name}.',
       platformChannelSpecifics,
+      payload: 'payment',
     );
   }
 
@@ -60,6 +61,7 @@ class AppService extends ChangeNotifier {
       'Ví đã bị trừ tiền',
       'Đã trừ ${product.price} \$ từ ví của bạn.',
       platformChannelSpecifics,
+      payload: 'deduction',
     );
   }
 
