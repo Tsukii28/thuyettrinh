@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:provider/provider.dart';
 import './screens/home_page.dart';
-import './screens/notifications_page.dart';
+import './screens/wallet_app.dart';
 import './services/app_service.dart';
 
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
@@ -12,7 +12,7 @@ final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
 void onDidReceiveNotificationResponse(NotificationResponse notificationResponse) async {
   AppService().clearUnreadNotifications();
-  navigatorKey.currentState?.push(MaterialPageRoute(builder: (context) => const NotificationsPage()));
+  navigatorKey.currentState?.push(MaterialPageRoute(builder: (context) => const WalletApp()));
 }
 
 Future<void> main() async {
